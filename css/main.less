@@ -1,0 +1,394 @@
+// ПЕРЕМЕННЫЕ
+// /цветовая схема
+@main-color: #2C3E50;
+@additional-color: #68839C;
+@accenting-color: #FFCC00;
+@bg-color: #FFFFFF;
+
+// ГЛОБАЛЬНЫЕ СТИЛИ
+html,
+body {
+  height: 100vh;
+  background-color: @bg-color;
+  color: @bg-color;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  min-height: 100vh; /*для прижания футера к низу экрана*/
+  background-color: @bg-color;
+}
+
+// БЛОКИ
+
+// /Повторяемые элементы - Кнопки
+.button {
+  display: inline-block;
+  border: 4px solid @bg-color;
+  padding: 2vw;
+  width: 55vw;
+  text-decoration: none;
+  color: @bg-color;
+  font-size: 5vw;
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  &:hover {
+    background-color: @accenting-color;
+  }
+  &:active {
+    -webkit-box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.35);
+  }
+  @media screen and (min-width: 410px) {
+    padding: 0 8px;
+    width: 226px;
+    height: 69px;
+    line-height: 69px;
+    font-size: 21px;
+  }
+}
+// /Повторяемые элементы - Ссылки
+.link {
+  color: @main-color;
+  &:hover {
+    color: @accenting-color;
+  }
+}
+.link_white {
+  color: @bg-color;
+}
+
+// /Кнопка "Наверх"
+.scroller {
+  position: fixed;
+  z-index: 9;
+  bottom: 30px;
+  left: 30px;
+  display:none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 6px 21px 5px rgba(33, 33, 33, 0.7);
+  box-shadow: 2px 6px 21px 5px rgba(33, 33, 33, 0.7);
+  background: url(../media/images/arrow-up.png) no-repeat left top;
+  cursor: pointer;
+  -webkit-transition: all 100ms;
+  -o-transition: all 100ms;
+  transition: all 100ms;
+  &:active {
+    bottom: 28px;
+    -webkit-box-shadow: 1px 4px 21px 5px rgba(33, 33, 33, 0.5);
+    box-shadow: 1px 4px 21px 5px rgba(33, 33, 33, 0.5);
+  }
+}
+
+// /ШАПКА САЙТА
+.header {
+  min-height: 90vh; // не влияет ни на что
+  padding-top: 20vh;
+  text-align: center;
+  line-height: 11vw;
+  font-size: 10vw;
+  background: url("../media/images/header-bg.jpg") no-repeat center top fixed;
+  background-size: cover;
+  @media screen and (min-width: 750px) {
+    line-height: 82px;
+    font-size: 75px;
+  }
+}
+.header__name {
+  background-color: @accenting-color;
+}
+
+// /Навигационный блок
+.menu {
+  padding: 20vh 0;
+  @media screen and (min-width: 800px) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.menu__button {
+  margin: 2vh;
+}
+
+// /ОСНОВНОЙ КОНТЕНТ
+.content {
+  color: @main-color;
+}
+.content__line {
+  margin: 0 auto;
+  height: 2px;
+  width: 80vw;
+  background-color: @additional-color;
+  opacity: 0.3;
+}
+
+.welcome,
+.skills,
+.portfolio,
+.contacts {
+  padding: 8vw 3vw;
+  text-align: center;
+  line-height: 10vw;
+  font-size: 10vw;
+  font-weight: bold;
+  @media screen and (min-width: 410px) {
+    line-height: 41px;
+    font-size: 41px;
+  }
+  @media screen and (min-width: 500px) {
+    padding: 6vw 3vw;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 5vw 3vw;
+  }
+  @media screen and (min-width: 1100px) {
+    padding: 4vw 3vw;
+  }
+  @media screen and (min-width: 1900px) {
+    padding: 4vw 10vw;
+  }
+}
+
+// /Приветственный блок
+.welcome__hello {
+  @media screen and (min-width: 1000px) {
+    white-space:pre-line;
+  }
+}
+.welcome__links {
+  padding-top: 4vw;
+  line-height: 7vw;
+  font-size: 6vw;
+  font-weight: normal;
+  @media screen and (min-width: 410px) {
+    line-height: 28px;
+    font-size: 25px;
+  }
+}
+
+// /Навыки
+.skills__skills-box {
+  margin: 4vw auto;
+}
+.skills-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.skill-box__skill {
+  margin: 10px 5px;
+  width: 131px;
+  height: 145px;
+  line-height: 8vw;
+  font-size: 6vw;
+  font-weight: normal;
+  @media screen and (min-width: 410px) {
+    line-height: 31px;
+    font-size: 25px;
+  }
+}
+.skill-box__skill-img {
+  width: 100px;
+  height: 100px;
+}
+
+// /Сертификаты (слайдер)
+.skill__certificates {
+  position: relative;
+  margin: 4vw auto 0;
+  max-width: 1334px;
+  overflow: hidden;
+}
+.buttons {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 145px;
+  cursor: pointer;
+}
+.buttons__arrow {
+  margin: 58px 0 0 0;
+  border-radius: 50%;
+  background-color: @accenting-color;
+}
+.next {right: 0;}
+.viewport {
+  position: relative;
+  left: 37px;
+  right: 37px;
+  width: calc(94vw - 94px);
+  max-width: 1260px;
+  height: 145px;
+  overflow: hidden;
+}
+.overview {
+  position: absolute;
+  width: 210px;
+}
+.overview li {float: left;}
+.certificates__image {
+  margin: 5px;
+  width: 200px;
+}
+
+// /Портфолио
+.portfolio__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 5vw 0;
+}
+.portfolio__miniature-box {
+  position: relative;
+  margin: 0 15px 20px;
+  width: 85vw;
+  &:hover .portfolio__miniature-hidden,
+  &:active .portfolio__miniature-hidden {
+    opacity: 1;
+  }
+  @media screen and (min-width: 500px) {
+    width: 420px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1000px) {
+    width: 37.8vw;
+  }
+  @media screen and (min-width: 1340px) and (max-width: 1499px) {
+    width: 28vw;
+  }
+}
+.portfolio__miniature-hidden {
+  position: absolute;
+  top: 0;
+  height: 87.3vw;
+  padding: 4vw;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 4vw;
+  color: @bg-color;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+  @media screen and (min-width: 500px) {
+    height: 431px;
+    padding: 20px;
+  }
+  @media screen and (min-width: 640px) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1000px) {
+    height: 39.3vw;
+    padding: 1.8vw;
+    font-size: 1.8vw;
+    line-height: 4.5vw;
+  }
+  @media screen and (min-width: 1340px) and (max-width: 1499px) {
+    height: 29vw;
+    padding: 1.1vw;
+    font-size: 1.7vw;
+    line-height: 2.9vw;
+  }
+}
+.portfolio__miniature-img {
+  width: 85vw;
+  cursor: pointer;
+  -webkit-box-shadow: 0 26px 44px -5px @main-color;
+  box-shadow: 0 26px 44px -5px @main-color;
+  @media screen and (min-width: 500px) {
+    width: 420px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1000px) {
+    width: 37.8vw;
+  }
+  @media screen and (min-width: 1340px) and (max-width: 1499px) {
+    width: 28vw;
+  }
+}
+.portfolio__button {
+  margin: 1vw 0;
+  border-color: @accenting-color;
+  &:hover {
+    border-color: @bg-color;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1000px) {
+    width: 21.1vw;
+    height: auto;
+    padding: 0.89vw;
+    font-size: 2.1vw;
+    line-height: 4.5vw;
+  }
+}
+
+// /Контакты
+.contacts {
+  min-height: calc(100vh - 70px); /*70px - высота футера*/
+  color: @bg-color;
+  background: url("../media/images/contacts-bg.jpg") no-repeat center bottom fixed;
+  background-size: cover;
+}
+.contacts__vcard {
+  margin: 4vw auto;
+}
+.vcard {
+  padding: 20px 10px;
+  white-space: pre-line;
+  line-height: 8vw;
+  font-size: 6vw;
+  font-weight: normal;
+  background-color: rgba(33, 33, 33, 0.7);
+  @media screen and (min-width: 410px) {
+    line-height: 32px;
+    font-size: 25px;
+  }
+  @media screen and (min-width: 500px) {
+    width: 453px;
+  }
+}
+.vcard__name {
+  background-color: @accenting-color;
+}
+.vcard__icon {
+  margin-right: 10px;
+}
+
+// /Футер
+.footer {
+  height: 70px;
+  margin-top: -70px; /*для прижания футера к низу экрана (равно футеру)*/
+  text-align: center;
+  line-height:70px;
+  font-size: 4.4vw;
+  background: url("../media/images/footer-bg.jpg") no-repeat center bottom fixed;
+  background-size: cover;
+  @media screen and (min-width: 410px) {
+    font-size: 18px;
+  }
+}
+
+// /Дубер футера для прижатия к низу экрана
+.clr:after {content: "";
+    height: 70px; /*высота, равная футеру*/
+    display: block;}
+
+//Пустой блок для предотвращения наезда на блоки с float
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
