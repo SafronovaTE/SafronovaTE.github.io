@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <!-- Файлы стилей -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Flat Style Website</title>
+</head>
+
+<body>
+    <!-- Контейнер-обертка для прижатия футера -->
+    <div class="container clr">
+        
+        <!-- Шапка сайта -->
+        <header class="header">
+            <!-- Логотип -->
+            <a class="logo header__logo" href="index.html">
+                <h1 class="logo__text"><span class="logo__capital-letter">M</span>inimal</h1>
+            </a>
+            <!-- Навигация -->
+            <nav class="nav header__nav">
+                <ul class="menu nav__menu">
+                    <li class="menu__item"><a class="menu__link" href="#">Products</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Основной контент -->
+        <main class="content">
+    
+            <!-- Приложение года (Баннеры с вкладками) -->
+            <section class="banners">
+                <ul class="banners__tabs">
+                    <li class="banners__tab">
+                        <input class="banners__slider" type="radio" name="tabs-0" id="tabs-0-0">
+                        <label class="banners__shape banners__shape_desktop" for="tabs-0-0"><div class="banners__shape-triangle banners__shape-triangle_desktop"></div>
+                        </label>
+                        
+                        <!-- Баннер 1 -->
+                        <div class="banner banners__banner banners__banner_desktop">
+                            <div class="banner__circle banner__circle_big"></div>
+                            <div class="banner__circle banner__circle_middle"></div>
+                            <div class="banner__circle banner__circle_small"></div>
+                            <img class="banner__image banner__image_desktop" src="media/images/desktop.png" alt="Desktop image">
+                            <div class="banner-info banner__banner-info">
+                                <div class="title-app banner-info__title-app">
+                                <div class="title-app__image"></div>
+                                App of the year
+                                </div>
+                                <div class="shoecase banner-info__shoecase">
+                                    <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                    <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                    <a class="btn shoecase__btn" href="#">
+                                        <div class="btn__image"></div>
+                                        Buy now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </li><!--
+                    --><li class="banners__tab">
+                        <input class="banners__slider" type="radio" name="tabs-0" id="tabs-0-1">
+                        <label class="banners__shape banners__shape_tablet" for="tabs-0-1"><div class="banners__shape-triangle banners__shape-triangle_tablet"></div>
+                        </label>
+                    
+                        <!-- Баннер 2 -->
+                        <div class="banner banners__banner banners__banner_tablet">
+                            <div class="banner__circle banner__circle_big"></div>
+                            <div class="banner__circle banner__circle_middle"></div>
+                            <div class="banner__circle banner__circle_small"></div>
+                            <img class="banner__image banner__image_ipad" src="media/images/ipad.png" alt="iPad image">
+                            <div class="banner-info banner__banner-info">
+                                <div class="title-app banner-info__title-app">
+                                    <div class="title-app__image"></div>
+                                    App of the year
+                                </div>
+                                <div class="shoecase banner-info__shoecase">
+                                    <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                    <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                    <a class="btn shoecase__btn" href="#">
+                                        <div class="btn__image"></div>
+                                        Buy now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </li><!--
+                    --><li class="banners__tab">
+                        <input class="banners__slider" type="radio" name="tabs-0" checked="checked" id="tabs-0-2">
+                        <label class="banners__shape banners__shape_mobile" for="tabs-0-2"><div class="banners__shape-triangle banners__shape-triangle_mobile"></div>
+                        </label>
+                    
+                        <!-- Баннер 3 -->
+                        <div class="banner banners__banner banners__banner_iphone">
+                            <div class="banner__circle banner__circle_big"></div>
+                            <div class="banner__circle banner__circle_middle"></div>
+                            <div class="banner__circle banner__circle_small"></div>
+                            <img class="banner__image banner__image_iphone" src="media/images/iphone.png" alt="iPhone image">
+                            <div class="banner-info banner__banner-info">
+                                <div class="title-app banner-info__title-app">
+                                    <div class="title-app__image"></div>
+                                    App of the year
+                                </div>
+                                <div class="shoecase banner-info__shoecase">
+                                    <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                    <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                    <a class="btn shoecase__btn" href="#">
+                                        <div class="btn__image"></div>
+                                        Buy now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </li>
+                </ul>
+            </section>
+    
+            <!-- О приложении года -->
+            <section class="about content__about">
+                <h2 class="about__topic">About minimal</h2>
+                <p class="about__info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <div class="title-app-year about__title-app-year">
+                    <img class="title-app-year__image-device" src="media/images/Shape-tablet-2.png" alt="image device">
+                    APP<br><span class="title-app-year__of-the-year">Of the year</span>
+                </div>
+            </section>
+    
+            <!-- Приложения (Баннеры с вкладками) -->
+            <section class="banners banners_big">
+                <ul class="banners__tabs">
+                    <li class="banners__tab">
+                        <input class="banners__slider" type="radio" name="tabs2-0" checked="checked" id="tabs2-0-0">
+                        <label class="banners__shape banners__shape_big banners__shape_search" for="tabs2-0-0"></label>
+                
+                        <!-- Баннер 1 -->
+                        <div class="banner banner_search banners__banner banners__banner_desktop">
+                            <img class="banner__image banner__image_desktop banner__image_lower" src="media/images/desktop.png" alt="Desktop image">
+                            <div class="banner-info banner__banner-info banner__banner-info_lower">
+                                <div class="shoecase banner-info__shoecase">
+                                    <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                    <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                    <a class="btn shoecase__btn" href="#">
+                                        <div class="btn__image"></div>
+                                        Buy now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </li><!--
+                    --><li class="banners__tab">
+                    <input class="banners__slider" type="radio" name="tabs2-0" id="tabs2-0-1">
+                    <label class="banners__shape banners__shape_big banners__shape_on" for="tabs2-0-1"></label>
+            
+                    <!-- Баннер 2 -->
+                    <div class="banner banner_on banners__banner banners__banner_tablet">
+                        <img class="banner__image banner__image_desktop banner__image_lower" src="media/images/desktop.png" alt="Desktop image">
+                        <div class="banner-info banner__banner-info banner__banner-info_lower">
+                            <div class="shoecase banner-info__shoecase">
+                                <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                <a class="btn shoecase__btn" href="#">
+                                    <div class="btn__image"></div>
+                                    Buy now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </li><!--
+                    --><li class="banners__tab">
+                    <input class="banners__slider" type="radio" name="tabs2-0" id="tabs2-0-2">
+                    <label class="banners__shape banners__shape_big banners__shape_apple" for="tabs2-0-2"></label>
+            
+                    <!-- Баннер 3 -->
+                    <div class="banner banner_apple banners__banner banners__banner_iphone">
+                        <img class="banner__image banner__image_desktop banner__image_lower" src="media/images/desktop.png" alt="Desktop image">
+                        <div class="banner-info banner__banner-info banner__banner-info_lower">
+                            <div class="shoecase banner-info__shoecase">
+                                <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                <a class="btn shoecase__btn" href="#">
+                                    <div class="btn__image"></div>
+                                    Buy now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </li><!--
+                    --><li class="banners__tab">
+                    <input class="banners__slider" type="radio" name="tabs2-0" id="tabs2-0-3">
+                    <label class="banners__shape banners__shape_big banners__shape_shopping" for="tabs2-0-3"></label>
+            
+                    <!-- Баннер 4 -->
+                    <div class="banner banner_shopping banners__banner banners__banner_tablet">
+                        <img class="banner__image banner__image_desktop banner__image_lower" src="media/images/desktop.png" alt="Desktop image">
+                        <div class="banner-info banner__banner-info banner__banner-info_lower">
+                            <div class="shoecase banner-info__shoecase">
+                                <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                <a class="btn shoecase__btn" href="#">
+                                    <div class="btn__image"></div>
+                                    Buy now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </li><!--
+                    --><li class="banners__tab">
+                    <input class="banners__slider" type="radio" name="tabs2-0" id="tabs2-0-4">
+                    <label class="banners__shape banners__shape_big banners__shape_lock" for="tabs2-0-4"></label>
+            
+                    <!-- Баннер 5 -->
+                    <div class="banner banner_lock banners__banner banners__banner_tablet">
+                        <img class="banner__image banner__image_desktop banner__image_lower" src="media/images/desktop.png" alt="Desktop image">
+                        <div class="banner-info banner__banner-info banner__banner-info_lower">
+                            <div class="shoecase banner-info__shoecase">
+                                <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                <a class="btn shoecase__btn" href="#">
+                                    <div class="btn__image"></div>
+                                    Buy now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </li><!--
+                    --><li class="banners__tab">
+                    <input class="banners__slider" type="radio" name="tabs2-0" id="tabs2-0-5">
+                    <label class="banners__shape banners__shape_big banners__shape_star" for="tabs2-0-5"></label>
+            
+                    <!-- Баннер 6 -->
+                    <div class="banner banner_star banners__banner banners__banner_tablet">
+                        <img class="banner__image banner__image_desktop banner__image_lower" src="media/images/desktop.png" alt="Desktop image">
+                        <div class="banner-info banner__banner-info banner__banner-info_lower">
+                            <div class="shoecase banner-info__shoecase">
+                                <h2 class="shoecase__shoecase-name">My apps shoecase</h2>
+                                <p class="shoecase__shoecase-info">Lorem Ipsum is simply dummy text ..... printing and typesetting industry.</p>
+                                <a class="btn shoecase__btn" href="#">
+                                    <div class="btn__image"></div>
+                                    Buy now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                </li>
+                </ul>
+            </section>
+    
+            <!-- % выполнения проекта -->
+            <section class="completed clearfix">
+                <p class="completed__completed-percent"><span class="completed__percent">60%</span><br>Of project Completed</p>
+                <div class="completed__arrow"></div>
+            </section>
+            
+        </main>
+        
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        Copyright &copy; 2018 Safronova Tatiana
+    </footer>
+
+    <!-- Скрипты -->
+
+</body>
+
+</html>
