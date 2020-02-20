@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,14 @@
   <meta name="subject" content="Портфолио html верстальщика">
   <meta name="keywords" content="верстка, верстальщик, html верстальщик, портфолио, примеры верстки">
   <meta name="author" content="Сафронова Татьяна">
- 
+
   <!--Поведение поисковых систем-->
   <meta name="robots" content="index,follow">
   <meta name="googlebot" content="index,follow">
   <meta name="google" content="nositelinkssearchbox">
   <meta name="google" content="notranslate">
- 
-  <!-- Фавиконы и иконки сайта --> 
+
+  <!-- Фавиконы и иконки сайта -->
   <link rel="apple-touch-icon" sizes="57x57" href="media/images/apple-touch-icon-57x57.png" data-mce-href="media/images/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="media/images/apple-touch-icon-60x60.png" data-mce-href="media/images/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="media/images/apple-touch-icon-72x72.png" data-mce-href="media/images/apple-touch-icon-72x72.png">
@@ -34,40 +35,63 @@
   <link rel="icon" type="image/png" href="media/images/favicon-16x16.png" sizes="16x16" data-mce-href="media/images/favicon-16x16.png">
   <meta name="msapplication-TileColor" content="#2C3E50">
   <meta name="msapplication-TileImage" content="media/images/mstile-144x144.png">
-  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148514181-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148514181-2');
+
+  </script>
+
+
   <meta name="yandex-verification" content="8aade75a61fceed5">
   <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  <script type="text/javascript">
+    (function(m, e, t, r, i, k, a) {
+      m[i] = m[i] || function() {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-       ym(52437349, "init", {
-            id:52437349,
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/52437349" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    ym(52437349, "init", {
+      id: 52437349,
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/52437349" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
   <!-- /Yandex.Metrika counter -->
- 
+
   <!-- Chrome, Firefox OS and Opera цвет адресной строки браузера-->
   <meta name="theme-color" content="#2C3E50">
- 
+
   <!-- Windows Phone цвет кнопок назад-вперед-->
   <meta name="msapplication-navbutton-color" content="#2C3E50">
- 
+
   <!-- iOS Safari на экране «Домой» включает полноэкранный режим-->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <!-- iOS Safari задает стиль панели состояния при полноэкранном режиме.-->
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
- 
+
   <!-- Яндекс.Браузер стили для верхней и нижней панелей браузера -->
- <meta name="viewport" content="ya-title=#2C3E50,ya-dock=fade">
- 
- <!-- СТИЛИ -->
+  <meta name="viewport" content="ya-title=#2C3E50,ya-dock=fade">
+
+  <!-- СТИЛИ -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -76,8 +100,9 @@
   <script src='js/jquery-3.3.1.min.js'></script>
   <script src="js/jquery.tinycarousel.min.js"></script>
   <script src='js/main.js'></script>
- 
+
 </head>
+
 <body>
   <!-- Контейнер-обертка для прижатия футера -->
   <div class="container clr">
@@ -103,8 +128,7 @@
       <section id="about-me" class="welcome">
         <p class="welcome__hello">Здравствуйте. Меня зовут Татьяна и я рада
           приветствовать Вас на своем сайте.</p>
-        <p class="welcome__links">Здесь я учусь делать сайты.<br>Вы можете подробно ознакомиться c <a class="link" href="#portfolio">моими работами</a>, а также <a class="link"
-                  href="#contacts">связаться со мной.</a>
+        <p class="welcome__links">Здесь я размещаю свои работы по верстке сайтов.<br>Вы можете с ними <a class="link" href="#portfolio">подробно ознакомиться</a>, а также <a class="link" href="#contacts">связаться со мной.</a>
         </p>
       </section>
       <hr class="content__line">
@@ -162,41 +186,23 @@
           <div class="viewport">
             <ul class="overview">
               <li><a href="https://geekbrains.ru/certificates/335639" target="_blank" rel="nofollow">
-                <img class="certificates__image"
-                     src="media/images/html-css.jpg"
-                     alt="Курс «HTML/CSS. Современная web-разработка»"
-                     title="Курс «HTML/CSS. Современная web-разработка»">
-              </a></li>
+                  <img class="certificates__image" src="media/images/html-css.jpg" alt="Курс «HTML/CSS. Современная web-разработка»" title="Курс «HTML/CSS. Современная web-разработка»">
+                </a></li>
               <li><a href="https://geekbrains.ru/certificates/483852" target="_blank" rel="nofollow">
-                <img class="certificates__image"
-                     src="media/images/html5-css3.jpg"
-                     alt="Курс «HTML5 и CSS3. Современные средства Web-разработки»"
-                     title="Курс «HTML5 и CSS3. Современные средства Web-разработки»">
-              </a></li>
+                  <img class="certificates__image" src="media/images/html5-css3.jpg" alt="Курс «HTML5 и CSS3. Современные средства Web-разработки»" title="Курс «HTML5 и CSS3. Современные средства Web-разработки»">
+                </a></li>
               <li><a href="https://geekbrains.ru/certificates/484938" target="_blank" rel="nofollow">
-                <img class="certificates__image"
-                     src="media/images/html-css-test.jpg"
-                     alt="Тестирование по «HTML&CSS. Сложный уровень»"
-                     title="Тестирование по «HTML&CSS. Сложный уровень»">
-              </a></li>
+                  <img class="certificates__image" src="media/images/html-css-test.jpg" alt="Тестирование по «HTML&CSS. Сложный уровень»" title="Тестирование по «HTML&CSS. Сложный уровень»">
+                </a></li>
               <li><a href="https://geekbrains.ru/certificates/503506" target="_blank" rel="nofollow">
-                <img class="certificates__image"
-                     src="media/images/js-1.jpg"
-                     alt="Курс «JavaScript. Уровень 1. Интерактив на JS»"
-                     title="Курс «JavaScript. Уровень 1. Интерактив на JS»">
-              </a></li>
+                  <img class="certificates__image" src="media/images/js-1.jpg" alt="Курс «JavaScript. Уровень 1. Интерактив на JS»" title="Курс «JavaScript. Уровень 1. Интерактив на JS»">
+                </a></li>
               <li> <a href="https://geekbrains.ru/certificates/546690" target="_blank" rel="nofollow">
-                <img class="certificates__image"
-                     src="media/images/jQuery.jpg"
-                     alt="Курс «jQuery для профессионалов. О селекторах, их использовании и сравнении с чистым JavaScript»"
-                     title="Курс «jQuery для профессионалов. О селекторах, их использовании и сравнении с чистым JavaScript»">
-              </a></li>
+                  <img class="certificates__image" src="media/images/jQuery.jpg" alt="Курс «jQuery для профессионалов. О селекторах, их использовании и сравнении с чистым JavaScript»" title="Курс «jQuery для профессионалов. О селекторах, их использовании и сравнении с чистым JavaScript»">
+                </a></li>
               <li><a href="https://geekbrains.ru/certificates/547922" target="_blank" rel="nofollow">
-                <img class="certificates__image"
-                     src="media/images/git.jpg"
-                     alt="Курс «Git. Быстрый старт. Основы работы с Git»"
-                     title="Курс «Git. Быстрый старт. Основы работы с Git»">
-              </a></li>
+                  <img class="certificates__image" src="media/images/git.jpg" alt="Курс «Git. Быстрый старт. Основы работы с Git»" title="Курс «Git. Быстрый старт. Основы работы с Git»">
+                </a></li>
             </ul>
           </div>
           <div class="buttons next"><img class="buttons__arrow" src="media/images/arrow-right.png" alt="вправо"></div>
@@ -254,11 +260,14 @@
       <section id="contacts" class="contacts">
         <h2>Связь со мной</h2>
         <!--микроформат hCard-->
-        <div class="contacts__vcard vcard"><!--
+        <div class="contacts__vcard vcard">
+          <!--
           --><span class="fn org vcard__name">Сафронова Татьяна Евгеньевна</span>
           <i class="fa fa-address-card-o vcard__icon" aria-hidden="true"></i>Резюме на <a class="link link_white" target="_blank" rel="nofollow" href="https://hh.ru/resume/f6c08fc1ff05c53f2a0039ed1f566747466737">HeadHunter</a>
           <i class="fa fa-map-marker vcard__icon" aria-hidden="true"></i><span class="adr"><span class="locality">г. Москва</span>, м. Динамо</span>
-          <i class="fa fa-phone vcard__icon" aria-hidden="true"></i><span class="tel">Позвонить: <a class="value link link_white" title="+7 (999) 960-13-70" href="tel:+7 (999) 960 13 70"><nobr>+7 (999) 960-13-70</nobr></a></span>
+          <i class="fa fa-phone vcard__icon" aria-hidden="true"></i><span class="tel">Позвонить: <a class="value link link_white" title="+7 (999) 960-13-70" href="tel:+7 (999) 960 13 70">
+              <nobr>+7 (999) 960-13-70</nobr>
+            </a></span>
           <i class="fa fa-envelope-o vcard__icon" aria-hidden="true"></i>Написать: <a class="link link_white" href="mailto:t.e.safronova@gmail.com">t.e.safronova@gmail.com</a>
         </div>
       </section>
@@ -268,7 +277,8 @@
   <footer class="footer">
     <a class="link link_white" href="http://legalacts.ru/kodeks/GK-RF-chast-4/razdel-vii/" target="_blank" rel="nofollow">Copyright &copy; Сафронова Татьяна 2017-
       <script>
-          document.write(new Date().getFullYear());
+        document.write(new Date().getFullYear());
+
       </script>.
     </a>
   </footer>
