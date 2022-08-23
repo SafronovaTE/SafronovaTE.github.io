@@ -1,0 +1,505 @@
+// ПОДКЛЮЧАЕМЫЕ ШРИФТЫ
+// /Montserrat font-family: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+// /Nunito font-family: 'Nunito', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+// /Poppins font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+// ПЕРЕМЕННЫЕ
+
+// /цветовая схема
+$main-color: #156963;
+$additional-color: #ffffff;
+$accenting-color: #000000;
+$text-color: #2C1500;
+$line-color: #E0E0E0;
+
+// /шрифты
+$main-font: 'Montserrat', sans-serif;
+$accenting-font: 'Nunito', sans-serif;
+$additional-font: 'Poppins', sans-serif;
+
+
+// ГЛОБАЛЬНЫЕ СТИЛИ
+html,
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  background-color: $additional-color;
+  color: $text-color;
+}
+body {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+// БЛОКИ
+
+// /Хедер
+.header {
+  position: absolute;
+  z-index: 99;
+  width: 1168px;
+  margin: 40px 56px;
+}
+.header__menu {
+  float: right;
+}
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.menu__search,
+.menu__shopping-cart {
+  padding: 0 20px;
+}
+.sign {
+  width: 130px;
+  font-family: $accenting-font;
+  text-decoration: none;
+  font-size: 14px;
+  text-align:center;
+  line-height:36px;
+}
+.sign_up {
+  color: $main-color;
+  width: 126px;
+  line-height: 32px;
+  border: 2px solid transparent;
+  -webkit-transition: border 200ms;
+  -o-transition: border 200ms;
+  transition: border 200ms;
+  &:hover {
+    border: 2px solid $main-color;
+  }
+}
+.sign_in {
+  color: $additional-color;
+  background-color: $main-color;
+}
+
+// /Слайдер
+.slider {
+  position: relative;
+  height: 740px;
+  width: 1280px;
+}
+.slider-wrapper {
+  position: relative;
+  height: 740px;
+  width: 1280px;
+
+  transition: opacity 300ms;
+}
+.slide {
+  position: absolute;
+  width: 1280px;
+  height: 740px;
+  opacity: 0;
+}
+.active {
+  opacity: 1;
+}
+.slider__main-plant {
+  float: left;
+}
+.slider__sliderinfo {
+  float: right;
+}
+.main-plant {
+  width: 608px;
+  height: 740px;
+}
+.sliderinfo {
+  padding: 0 75px 110px;
+  width: 672px;
+  height: 582px;
+  border: 1px solid $accenting-color;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slider__plantname {
+  margin: 0; //нужно чтобы сверху сайта не было пустой полосы!!!
+  padding-top: 186px;
+}
+.plantname {
+  height: 166px;
+  font-size: 68px;
+  font-weight: 500;
+  line-height: 83px;
+  letter-spacing: -2px;
+  color: $main-color;
+  overflow: hidden;
+}
+.plantdescription {
+  height: 130px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  opacity: 0.8;
+  overflow: hidden;
+}
+.slider-btn {
+  display: inline-block;
+  padding-top: 38px;
+  padding-bottom: 37px;
+  box-sizing: border-box;
+  height: 160px;
+}
+.slider-prev {
+  padding-left: 86px;
+  padding-right: 48px;
+  width: 347px;
+}
+.slider-next {
+  padding-left: 48px;
+  padding-right: 48px;
+  width: 320px;
+  background-color: $main-color;
+}
+.switch {
+  font-size: 24px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+.switch_on-green {
+  color: $additional-color;
+}
+.switch-plant {
+  font-size: 32px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $main-color;
+}
+.switch-plant_on-green {
+  color: $additional-color;
+}
+.slider-nav {
+  position: absolute;
+  z-index: 98;
+  top: 582px;
+  left: 634px;
+}
+.slider-btn-hide {
+  border: none;
+  height: 160px;
+  width: 320px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+// /Преимущества
+.advantages {
+  margin: 142px 56px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.advant-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: 1px solid $line-color;
+  padding: 21px 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 268px;
+  height: 155px;
+}
+.advant-icon {
+  height: 48px;
+  width: 48px;
+}
+.advant-name {
+  margin: 0;
+  padding-left: 16px;
+  height: 48px;
+  width: 137px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $main-color;
+}
+.advant-description {
+  margin: 0;
+  width: 236px;
+  height: 48px;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+// /Избранные растения
+.featured {
+  margin: 80px 56px;
+}
+.featured-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 31px;
+}
+.featured-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+.filter {
+  border: 1px solid $line-color;
+  width: 160px;
+  height: 31px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; // скрывает родную стрелку
+  background-image: url('../media/images/chevron-down (1) 1.svg');
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 12px auto;
+}
+.line {
+  display: block;
+  margin: 16px auto 24px;
+  border: 1px solid $line-color;
+}
+.plants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.plant {
+  width: 217px;
+  height: 281px;
+  text-align: center;
+}
+.plant-foto {
+  display: block;
+  height: 217px;
+  width: 217px;
+  background-color: #F3F4F6;
+}
+.plant-link {
+  display: block;
+  text-decoration: none;
+  color: $text-color;
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  &:hover {
+    color: $main-color;
+  }
+  &:hover .plant-name {
+    -webkit-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+  }
+}
+.plant-name {
+  margin: 16px auto 8px;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+.price {
+  font-weight: 600;
+}
+
+// /Статья
+.article-block {
+  margin: 80px 56px;
+}
+.article {
+  float: left;
+  width: 568px;
+}
+.article-wrapper {
+  height: 366px;
+  padding-left: 23px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.article-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+.article-paragraph {
+  height: auto;
+  font-weight: 400;
+  line-height: 28px;
+  opacity: 0.8;
+}
+.illustration {
+  height: 239px;
+  width: 568px;
+}
+.illustration-big {
+  float: right;
+  height: 610px;
+  width: 513px;
+}
+
+// /Баннер
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 80px 56px;
+  padding-left: 97px;
+  padding-right: 39px;
+  background-color: #F3F4F6;
+}
+.banner-content {
+  width: 585px;
+}
+.banner-header {
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+.btn {
+  display: block;
+  height: 40px;
+  width: 152px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px;
+  color: $additional-color;
+  background-color: $main-color;
+  &:hover {
+    -webkit-box-shadow: 5px 5px 50px 5px rgba(0, 0, 0, 0.35);
+    box-shadow: 5px 5px 50px 5px rgba(0, 0, 0, 0.35);
+  }
+}
+
+// /Футер
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-top: 1px solid rgba(21, 105, 99, .3);
+  padding: 60px 167px 71px;
+  font-family: $accenting-font;
+}
+.footer-headers {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $accenting-color;
+}
+.address-block {
+  width: 282px;
+}
+.address-block__link-to-main {
+  display: block;
+  margin-bottom: 24px;
+}
+.link-to-main {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $main-color;
+  font-family: $additional-font;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+.address {
+  opacity: .9;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.footer-links {
+  display: block;
+  padding: 7px 0;
+  text-decoration: none;
+  color: $accenting-color;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.newsletter {
+  width: 234px;
+}
+.newsletter__submit {
+  margin-top: 14px;
+}
+.input {
+  padding-left: 13px;
+  border: 1px solid $line-color;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 234px;
+  font-size: 12px;
+  line-height: 28px;
+}
+.submit {
+  padding: 6px 13px;
+  border: none;
+  border-radius: 2px;
+  font-size: 8px;
+  cursor: pointer;
+  color: $additional-color;
+  background-color: $main-color;
+  &:hover {
+    -webkit-box-shadow: 5px 5px 22px 2px rgba(0, 0, 0, 0.35);
+    box-shadow: 5px 5px 22px 2px rgba(0, 0, 0, 0.35);
+  }
+}
+
+
+// /Пустой блок для предотвращения наезда на блоки с float
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}

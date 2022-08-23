@@ -1,0 +1,465 @@
+// ПЕРЕМЕННЫЕ
+// /цветовая схема
+$additional-color: #2C3E50;
+$accenting-color: #FFCC00;
+$main-color: #FFFFFF;
+
+// ГЛОБАЛЬНЫЕ СТИЛИ
+html,
+body {
+  height: 100vh;
+  background-color: $main-color;
+  color: $main-color;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  min-height: 100vh; /*для прижания футера к низу экрана*/
+  background-color: $main-color;
+}
+
+// БЛОКИ
+
+// /Повторяемые элементы - Кнопки
+.button {
+  display: inline-block;
+  border: 4px solid $accenting-color;
+  width: 55vmin;
+  height: 13vmin;
+  text-decoration: none;
+  color: $main-color;
+  font-size: 5vmin;
+  line-height: calc(13vmin - 8px);
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  &:hover,
+  &:focus {
+    border-color: $main-color;
+    background-color: $accenting-color;
+  }
+  &:active {
+    -webkit-box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.35);
+  }
+  @media screen and (min-width: 620px) and (orientation: portrait) {
+    width: 42vw;
+    height: 9vw;
+    line-height: calc(9vw - 8px);
+    font-size: 4vmin;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 32vw;
+    height: 7vw;
+    line-height: calc(7vw - 8px);
+    font-size: 3.5vmin;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 25vw;
+    height: 6vw;
+    line-height: calc(6vw - 8px);
+    font-size: 3.2vmin;
+  }
+  @media screen and (min-width: 1400px) {
+    width: 23vw;
+    height: 5vw;
+    line-height: calc(5vw - 8px);
+    font-size: 3.2vmin;
+  }
+  @media screen and (min-width: 1921px) {
+    width: 440px;
+    height: 96px;
+    line-height: 88px;
+    font-size: 34px;
+  }
+}
+// /Повторяемые элементы - Ссылки
+.link {
+  color: $additional-color;
+  &:hover {
+    color: $accenting-color;
+  }
+}
+.link_white {
+  color: $main-color;
+}
+// /Повторяемые элементы - Заголовки разделов сайта
+.section-name {
+  padding: 20px 0;
+  line-height: 10vmin;
+  font-size: 10vmin;
+  font-weight: bold;
+  @media screen and (min-width: 500px) and (orientation: portrait) {
+    line-height: 42px;
+    font-size: 42px;
+  }
+  @media screen and (min-width: 840px) {
+    line-height: 50px;
+    font-size: 42px;
+  }
+  @media screen and (min-width: 1400px) {
+    line-height: 56px;
+  }
+}
+// /Повторяемые элементы - Описания (текущего сайта и работ в портфолио)
+.about {
+  font-size: 5vmin;
+  line-height: 6vmin;
+  font-style: italic;
+  opacity: .8;
+  @media screen and (min-width: 620px) and (orientation: portrait) {
+    line-height: 5vmin;
+    font-size: 4vmin;
+  }
+  @media screen and (min-width: 1000px) {
+    line-height: 4.5vmin;
+    font-size: 3.5vmin;
+  }
+  @media screen and (min-width: 1921px) {
+    line-height: 48px;
+    font-size: 38px;
+  }
+}
+
+// /Кнопка "Наверх"
+.scroller {
+  position: fixed;
+  z-index: 9;
+  bottom: 15px;
+  left: 15px;
+  display: none;
+  width: 17vmin;
+  height: 17vmin;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 6px 21px 5px rgba(33, 33, 33, 0.7);
+  box-shadow: 2px 6px 21px 5px rgba(33, 33, 33, 0.7);
+  background: url(../media/images/arrow-up2.svg) no-repeat left top,
+  rgba(255, 255, 255, .7);
+  cursor: pointer;
+  -webkit-transition: all 100ms;
+  -o-transition: all 100ms;
+  transition: all 100ms;
+  &:active {
+    bottom: 13px;
+    -webkit-box-shadow: 1px 4px 21px 5px rgba(33, 33, 33, 0.5);
+    box-shadow: 1px 4px 21px 5px rgba(33, 33, 33, 0.5);
+  }
+  @media screen and (min-width: 620px) and (orientation: portrait) {
+    width: 12vmin;
+    height: 12vmin;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 80px;
+    height: 80px;
+  }
+  @media screen and (min-width: 2000px) {
+    bottom: 30px;
+    left: calc((100vw - 1920px) / 2);
+    &:active {
+      bottom: 28px;
+    }
+  }
+}
+
+// /ШАПКА САЙТА
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 7vh 4vw 5vh;
+  height: 100vh;
+  text-align: center;
+  line-height: 11vmin;
+  font-size: 9vmin;
+  background: url("../media/images/header-bg-opacity.png") no-repeat center top fixed,
+              url("../media/images/header-bg.jpg") no-repeat center top fixed;
+  background-size: cover;
+  @media screen and (min-width: 620px) and (orientation: portrait) {
+    line-height: 9.5vmin;
+    font-size: 8vmin;
+  }
+  @media screen and (min-width: 1000px) {
+    line-height: 9vmin;
+    font-size: 7vmin;
+  }
+  @media screen and (min-width: 1400px) {
+    line-height: 7.5vmin;
+    font-size: 6.5vmin;
+  }
+  @media screen and (min-width: 1921px) {
+    padding: 7vh calc((100vw - 1920px) / 2) 5vh;
+    line-height: 82px;
+    font-size: 70px;
+  }
+}
+.name {
+  padding: 0 5px;
+  line-height: 14vmin;
+  background-color: $accenting-color;
+  @media screen and (min-width: 1921px) {
+    line-height: 150px;
+  }
+}
+
+// /Навигационный блок
+.menu {
+  @media screen and (orientation: landscape) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.menu__button {
+  margin: 2vh 2vw;
+  @media screen and (min-width: 1921px) {
+    margin: 22px 38px;
+  }
+}
+
+// /ОСНОВНОЙ КОНТЕНТ
+.content {
+  text-align: center;
+  color: $additional-color;
+}
+
+// /Портфолио
+.portfolio {
+  padding: 5vmin;
+  @media screen and (min-width: 1000px) {
+    padding: 40px;
+  }
+  @media screen and (min-width: 1921px) {
+    padding: 54px calc((100vw - 1920px) / 2);
+  }
+}
+.portfolio-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.portfolio-box__work-box {
+  margin-bottom: 50px;
+  @media screen and (min-width: 1000px) {
+    margin: 0 20px 50px;
+  }
+}
+.work-box,
+.work-box__work-img {
+  display: block;
+  width: 90vw;
+  @media screen and (min-width: 1000px) {
+    width: 41vw;
+  }
+  @media screen and (min-width: 1900px) {
+    width: 566px;
+  }
+}
+.work-box {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  color: $main-color;
+  font-size: 16px;
+  line-height: 18px;
+  -webkit-box-shadow: 0 26px 44px -5px $additional-color;
+  box-shadow: 0 26px 44px -5px $additional-color;
+  background-color: $additional-color;
+  &:hover .portfolio-box__work-hidden,
+  &:active .portfolio-box__work-hidden,
+  &:focus .portfolio-box__work-hidden {
+    opacity: 1;
+  }
+  @media screen and (min-width: 300px) and (orientation: portrait) {
+    height: 80vh;
+  }
+  @media screen and (min-width: 300px) and (orientation: landscape) {
+    height: 250vh;
+  }
+  @media screen and (min-width: 1000px) {
+    height: 650px;
+  }
+  @media screen and (min-width: 1330px) {
+    height: 700px;
+  }
+  @media screen and (min-width: 1500px) {
+    height: 780px;
+  }
+  @media screen and (min-width: 1900px) {
+    height: 900px;
+  }
+}
+.portfolio-box__work-hidden {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4vmin;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 10vmin;
+  color: $main-color;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+  @media screen and (min-width: 1900px) {
+    padding: 40px;
+  }
+}
+.work-name {
+  margin-top: 6vmin;
+  font-size: 6vmin;
+  line-height: 6vmin;
+  @media screen and (min-width: 600px) and (orientation: portrait) {
+    line-height: 36px;
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1000px) {
+    line-height: 26px;
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1900px) {
+    margin-top: 64px;
+    line-height: 30px;
+    font-size: 30px;
+  }
+}
+.about-work {
+  line-height: 8vmin;
+  vertical-align: text-bottom;
+  @media screen and (min-width: 620px) and (orientation: portrait) {
+    line-height: 6vmin;
+  }
+  @media screen and (min-width: 1000px) {
+    line-height: 36px;
+    font-size: 26px;
+  }
+}
+.portfolio-box__button {
+  margin: 5vmin 0;
+  @media screen and (min-width: 1000px) {
+    margin: 45px 0;
+    width: 300px;
+    height: 56px;
+    line-height: 48px;
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1900px) {
+    margin: 54px 0;
+    width: 340px;
+    height: 76px;
+    line-height: 68px;
+    font-size: 26px;
+  }
+}
+
+// /Контакты
+.contacts {
+  padding: 5vmin;
+  overflow: hidden;
+  color: $main-color;
+  background: url("../media/images/contacts-bg.jpg") no-repeat center bottom fixed;
+  background-size: cover;
+  @media screen and (min-width: 1000px) {
+    padding: 40px;
+  }
+  @media screen and (min-width: 1921px) {
+    padding: 54px calc((100vw - 1920px) / 2);
+  }
+}
+.contacts__contacts-box {
+  margin: 0 auto;
+}
+.contacts-box {
+  padding: 20px 10px;
+  max-width: 90vw;
+  line-height: 8vmin;
+  font-size: 6vmin;
+  font-weight: normal;
+  background-color: rgba(33, 33, 33, 0.7);
+  @media screen and (min-width: 500px) and (orientation: portrait) {
+    line-height: 46px;
+    font-size: 30px;
+  }
+  @media screen and (min-width: 700px) {
+    max-width: 70vw;
+  }
+  @media screen and (min-width: 1000px) {
+    max-width: 60vw;
+    line-height: 46px;
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1240px) {
+    line-height: 42px;
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1900px) {
+    width: 700px;
+  }
+}
+.contacts__myname {
+  margin-bottom: 15px;
+}
+.myname {
+  background-color: $accenting-color;
+}
+.contacts__icon {
+  margin-right: 10px;
+  height: 4vmin;
+  @media screen and (min-width: 500px) and (orientation: portrait) {
+    margin-right: 15px;
+    height: 23px;
+  }
+  @media screen and (min-width: 1000px) {
+    margin-right: 15px;
+    height: 23px;
+  }
+  @media screen and (min-width: 1240px) {
+    height: 18px;
+  }
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+// /Футер
+.footer {
+  height: 60px;
+  margin-top: -60px; /*для прижания футера к низу экрана (равно футеру)*/
+  text-align: center;
+  line-height:60px;
+  font-size: 4vmin;
+  background: url("../media/images/footer-bg.jpg") no-repeat center bottom fixed;
+  background-size: cover;
+  @media screen and (min-width: 410px) {
+    font-size: 16px;
+  }
+}
+
+// /Дубер футера для прижатия к низу экрана
+.clr:after {content: "";
+    height: 60px; /*высота, равная футеру*/
+    display: block;}
+
+//Пустой блок для предотвращения наезда на блоки с float
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}

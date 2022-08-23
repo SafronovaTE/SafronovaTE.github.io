@@ -1,0 +1,1200 @@
+// ПОДКЛЮЧАЕМЫЕ ШРИФТЫ
+
+// /Open Sans
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+// /Segoe WP Light
+@font-face {
+    font-family: 'Segoe WP Light';
+    src: local('☺'),
+    url('../media/fonts/SegoeWP/SegoeWP-Light.woff') format('woff'),
+    url("../media/fonts/SegoeWP/SegoeWP-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+// /Segoe WP Black
+@font-face {
+    font-family: 'Segoe WP Black';
+    src: local('☺'),
+    url('../media/fonts/SegoeWP/SegoeWP-Black.woff') format('woff'),
+    url("../media/fonts/SegoeWP/SegoeWP-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+// /Segoe WP Bold
+@font-face {
+    font-family: 'Segoe WP';
+    src: local('☺'),
+    url('../media/fonts/SegoeWP/SegoeWP Regular.woff') format('woff'),
+    url("../media/fonts/SegoeWP/SegoeWP Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+// /StRyde-Regular
+@font-face {
+    font-family: 'StRyde-Regular';
+    src: url('../media/fonts/StRyde/stryde-regular-webfont.eot');
+    src: local('☺'),
+    url('../media/fonts/StRyde/stryde-regular-webfont.woff') format('woff'),
+    url('../media/fonts/StRyde/stryde-regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// /NewAthenaUnicode
+@font-face {
+    font-family:"NewAthenaUnicode";
+    src: url("../media/fonts/NewAthenaUnicode/newathu.eot") format("eot");
+    src: local('☺'),
+    url("../media/fonts/NewAthenaUnicode/newathu.woff") format("woff"),
+    url("../media/fonts/NewAthenaUnicode/newathu.ttf") format("truetype"),
+    url("../media/fonts/NewAthenaUnicode/newathu.svg#NewAthenaUnicode") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+// ПЕРЕМЕННЫЕ
+
+// /цветовая схема
+@main-color: #ffffff;
+@additional-color: #079491;
+@accenting-color: #49d7b0;
+@text-color: #565656;
+
+// /размеры
+@rem1: 10px; //размер 1 rem для <html>
+
+// /медиазапросы
+@xs: ~"(max-width: 619px)"; //экраны в основном 320 и 360
+@s: ~"(min-width: 620px) and (max-width: 749px)"; //640 и 667
+@m: ~"(min-width: 750px) and (max-width: 999px)"; //768
+@l: ~"(min-width: 1000px) and (max-width: 1279px)"; //1080
+@xl: ~"(min-width: 1280px)"; //1280 (на данном сайте по умолчанию)
+
+// /шрифты
+@font-open-sans: "Open Sans";
+@font-segoe-wp-light: "Segoe WP Light";
+@font-segoe-wp-black: "Segoe WP Black";
+@font-segoe-wp: "Segoe WP";
+@font-stryde-regular: "StRyde-Regular";
+@font-newathenaunicode: "NewAthenaUnicode";
+
+// ГЛОБАЛЬНЫЕ СТИЛИ
+html,
+body {
+    height: 100%;
+    font-size: @rem1;
+    background-color: @main-color;
+}
+
+.container {
+    min-height: 100%; /*для прижания футера к низу экрана*/
+    font-size: 1.6rem;
+}
+
+// БЛОКИ
+// /ШАПКА САЙТА
+.header {
+    margin: 0 auto;
+    max-width: 128rem;
+    min-height: 10rem;
+    @media screen and @l {
+        max-width: 100rem;
+    }
+    @media screen and @m {
+        max-width: 75rem;
+    }
+    @media screen and @s {
+        max-width: 62rem;
+    }
+    @media screen and @xs {
+        max-width: 32rem;
+    }
+}
+.header__logo {
+    float: left;
+    margin: 2.2rem 0 0 16.4rem;
+    // 750 (768)
+    @media screen and @m {
+        margin: 2.2rem 0 0 7.4rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        margin: 2.2rem 0 0 3.4rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        float: none;
+        margin: 2.2rem auto;
+    }
+}
+.header__nav {
+    padding: 4.2rem 14.3rem;
+    text-align: right;
+    // 750 (768)
+    @media screen and @m {
+        padding: 4.2rem 7.4rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        padding: 4.2rem 3.4rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        padding: 0 0 2.2rem;
+        text-align: center;
+    }
+}
+
+// /Логотип
+.logo {
+    display: block;
+    width: 17.9rem;
+    text-decoration: none;
+    font-family: @font-stryde-regular;
+    color: @additional-color - #040805;
+}
+.logo__text {
+    margin: 0;
+    font-size: 4.3rem;
+    font-weight: 400;
+}
+.logo__capital-letter {
+    display: inline-block;
+    margin-right: 0.7rem;
+    height: 6.6rem;
+    width: 4.9rem;
+    text-align: center;
+    line-height: 5.9rem;
+    font-family: @font-segoe-wp-light;
+    font-size: 4.3rem;
+    font-weight: 400;
+    color: @main-color;
+    background-image: linear-gradient(to bottom,
+        @additional-color + #3B5A52 1.1rem,
+        @additional-color + #274E45 1.2rem,
+        @additional-color + #274E45 2.2rem,
+        @additional-color + #183C33 2.3rem,
+        @additional-color + #183C33 3.3rem,
+        @additional-color + #102C24 3.4rem,
+        @additional-color + #102C24 4.4rem,
+        @additional-color + #071C14 4.5rem,
+        @additional-color + #071C14 5.5rem,
+        @additional-color + #030C05 5.6rem,
+        @additional-color + #030C05 6.6rem);
+}
+
+// /Навигационный блок
+
+// /Меню
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.menu__item {
+    display: inline-block;
+    padding: 0 2rem;
+    border-right: 0.1rem solid @text-color;
+    &:last-child {border-right: none;}
+    // 620 (640 и 667)
+    @media screen and @s {
+        padding: 0 1.5rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        padding: 0 1rem;
+    }
+}
+.menu__link {
+    text-decoration: none;
+    font-family: @font-segoe-wp-light;
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: @text-color;
+    -webkit-transition: color 200ms;
+    -o-transition: color 200ms;
+    transition: color 200ms;
+    &:hover {
+        text-decoration: underline;
+        color: @additional-color;
+    }
+    &:active {
+        text-decoration: underline;
+        color: @additional-color;
+    }
+}
+
+// /ОСНОВНОЙ КОНТЕНТ
+.content {
+    width: 128rem;
+    margin: 0 auto;
+    @media screen and @l {
+        max-width: 100rem;
+    }
+    @media screen and @m {
+        max-width: 75rem;
+    }
+    @media screen and @s {
+        max-width: 62rem;
+    }
+    @media screen and @xs {
+        max-width: 32rem;
+    }
+}
+.content__about {
+    margin: 0 auto;
+}
+
+// /БАННЕРЫ с вкладками
+.banners {
+    position: relative;
+    width: 100%;
+    height: 53.9rem;
+    // 750 (768)
+    @media screen and @m {
+        min-height: 100rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        min-height: 100rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        min-height: 80rem;
+    }
+}
+.banners_big {
+    min-height: 69.8rem;
+    // 750 (768)
+    @media screen and @m {
+        min-height: 82rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        min-height: 82rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        min-height: 65rem;}
+}
+.banners__tabs {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    list-style-type: none;
+}
+.banners__tab {
+    display: inline-block;
+}
+.banners__slider {
+    position: absolute;
+    opacity: 0;
+    &:checked ~ .banners__banner {
+        display: block;
+    }
+    &:checked + .banners__shape > .banners__shape-triangle {
+        display: block;
+    }
+}
+.banners__shape {
+    position: relative;
+    display: inline-block;
+    z-index: 999;
+    margin: 0;
+    width: 11.9rem;
+    height: 12.3rem;
+    padding: 0;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: center;
+    -webkit-transition: -webkit-filter 300ms;
+    transition: -webkit-filter 300ms;
+    -o-transition: filter 300ms;
+    transition: filter 300ms, -webkit-filter 300ms;
+    &:hover {
+        -webkit-filter: contrast(180%);
+        filter: contrast(180%);
+    }
+    &:active {
+        -webkit-filter: contrast(180%);
+        filter: contrast(180%);
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        width: 10.666666rem;
+    }
+}
+.banners__shape_big {
+    width: 21.33333333333333rem;
+    height: 17rem;
+    &:hover {
+        filter: none;
+    }
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        width: 16.666666666666666rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        width: 10.333333333333333rem;
+        height: 12.5rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        width: 5.333333333333333rem;
+        height: 6.5rem;
+    }
+}
+.banners__shape-triangle {
+    display: none;
+    position: absolute;
+    top: 12.4rem;
+    left: 5rem;
+    border: 1.1333rem solid transparent;
+    // 320(320 и 360)
+    @media screen and @xs {
+        left: 4.2rem;
+    }
+}
+.banners__shape-triangle_desktop {
+    border-top: 1.7rem solid @additional-color + #000603; /* треугольник */
+}
+.banners__shape-triangle_tablet {
+    border-top: 1.7rem solid @additional-color - #030B08; /* треугольник */
+}
+.banners__shape-triangle_mobile {
+    border-top: 1.7rem solid @additional-color - #06170F; /* треугольник */
+}
+.banners__shape_desktop {
+    background:
+        url("../media/images/Shape desktop.png"),
+        @additional-color + #000603;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+.banners__shape_tablet {
+    background:
+        url("../media/images/Shape tablet.png"),
+        @additional-color - #030B08;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+.banners__shape_mobile {
+    background:
+        url("../media/images/Shape mobile.png"),
+        @additional-color - #06170F;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+.banners__shape_search {
+    background:
+            url("../media/images/Shape-search.png"),
+                @additional-color - #063025;
+    background-position: center;
+    background-repeat: no-repeat;
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-size: 90%;
+    }
+}
+.banners__shape_on {
+    background:
+            url("../media/images/Shape-on.png"),
+                @accenting-color - #405C2C;
+    background-position: center;
+    background-repeat: no-repeat;
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-size: 85%;
+    }
+}
+.banners__shape_apple {
+    background:
+            url("../media/images/Shape-apple.png"),
+                @accenting-color - #384817;
+    background-position: center;
+    background-repeat: no-repeat;
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-size: 84%;
+    }
+}
+.banners__shape_shopping {
+    background:
+            url("../media/images/Shape-shopping.png"),
+                @accenting-color - #2C3706;
+    background-position: center;
+    background-repeat: no-repeat;
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-size: 90%;
+    }
+}
+.banners__shape_lock {
+    background:
+            url("../media/images/Shape-lock.png"),
+                @additional-color + #222331;
+    background-position: center;
+    background-repeat: no-repeat;
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-size: 80%;
+    }
+}
+.banners__shape_star {
+    background:
+            url("../media/images/Shape-star.png"),
+                @additional-color + #353644;
+    background-position: center;
+    background-repeat: no-repeat;
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-size: 90%;
+    }
+}
+.banners__banner {
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+// /Баннер
+.banner {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    background-image: linear-gradient(to bottom right,
+        @additional-color - #072215 2rem,
+        @additional-color + #093A24);
+}
+.banner_search {
+    background-image: linear-gradient(to bottom right,
+        @additional-color - #063025 20%,
+        @additional-color + #031108 85%,
+        @additional-color + #020C06);
+}
+.banner_on {
+    background-image: linear-gradient(to bottom right,
+        @additional-color - #063025,
+        @accenting-color - #405C2C 16%,
+        @accenting-color - #405C2C 38%,
+        @additional-color + #031108 85%,
+        @additional-color + #020C06);
+}
+.banner_apple {
+    background-image: linear-gradient(to bottom right,
+        @additional-color - #063025,
+        @accenting-color - #384817 27%,
+        @accenting-color - #384817 45%,
+        @additional-color + #031108 85%,
+        @additional-color + #020C06);
+    // 750 (768)
+    @media screen and @m {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @accenting-color - #384817 25%,
+            @accenting-color - #384817 43%,
+            @additional-color + #031108 85%,
+            @additional-color + #020C06);
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @accenting-color - #384817 23%,
+            @accenting-color - #384817 41%,
+            @additional-color + #031108 85%,
+            @additional-color + #020C06);
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @accenting-color - #384817 23%,
+            @accenting-color - #384817 41%,
+            @additional-color + #031108 85%,
+            @additional-color + #020C06);
+    }
+}
+.banner_shopping {
+    background-image: linear-gradient(to bottom right,
+        @additional-color - #063025,
+        @accenting-color - #2C3706 35%,
+        @accenting-color - #2C3706 48%,
+        @additional-color + #031108 85%,
+        @additional-color + #020C06);
+    // 750 (768)
+    @media screen and @m {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @accenting-color - #2C3706 33%,
+            @accenting-color - #2C3706 45%,
+            @additional-color + #031108 85%,
+            @additional-color + #020C06);
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @accenting-color - #2C3706 31%,
+            @accenting-color - #2C3706 42%,
+            @additional-color + #031108 85%,
+            @additional-color + #020C06);
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @accenting-color - #2C3706 31%,
+            @accenting-color - #2C3706 42%,
+            @additional-color + #031108 85%,
+            @additional-color + #020C06);
+    }
+}
+.banner_lock {
+    background-image: linear-gradient(to bottom right,
+        @additional-color - #063025,
+        @additional-color + #222331 46%,
+        @additional-color + #222331 58%,
+        @additional-color + #020C06);
+    // 750 (768)
+    @media screen and @m {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @additional-color + #222331 42%,
+            @additional-color + #222331 52%,
+            @additional-color + #020C06);
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @additional-color + #222331 40%,
+            @additional-color + #222331 50%,
+            @additional-color + #020C06);
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @additional-color + #222331 40%,
+            @additional-color + #222331 50%,
+            @additional-color + #020C06);
+    }
+}
+.banner_star {
+    background-image: linear-gradient(to bottom right,
+        @additional-color - #063025,
+        @additional-color + #353644 55%,
+        @additional-color + #353644 68%,
+        @additional-color + #020C06);
+    // 750 (768)
+    @media screen and @m {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @additional-color + #353644 50%,
+            @additional-color + #353644 63%,
+            @additional-color + #020C06);
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @additional-color + #353644 48%,
+            @additional-color + #353644 59%,
+            @additional-color + #020C06);
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        background-image: linear-gradient(to bottom right,
+            @additional-color - #063025,
+            @additional-color + #353644 48%,
+            @additional-color + #353644 59%,
+            @additional-color + #020C06);
+    }
+}
+.banner__circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: @additional-color + #0C251A;
+}
+.banner__circle_big {
+    top: 4.8rem;
+    left: 19.6rem;
+    height: 45.2rem;
+    width: 45.2rem;
+    opacity: 0.2;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        left: 7.6rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        top: 11.8rem;
+        left: 15.6rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        top: 11.8rem;
+        left: 8.6rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        top: 12.8rem;
+        left: 4.7rem;
+        height: 22.6rem;
+        width: 22.6rem;;
+    }
+}
+.banner__circle_middle {
+    top: 7.8rem;
+    left: 22.5rem;
+    height: 39.4rem;
+    width: 39.4rem;
+    opacity: 0.2;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        left: 10.5rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        top: 14.8rem;
+        left: 18.5rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        top: 14.8rem;
+        left: 11.5rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        top: 14.25rem;
+        left: 6.15rem;
+        height: 19.7rem;
+        width: 19.7rem;
+    }
+}
+.banner__circle_small {
+    top: 11.1rem;
+    left: 25.5rem;
+    height: 33.4rem;
+    width: 33.4rem;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        left: 13.5rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        top: 18.1rem;
+        left: 21.5rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        top: 18.1rem;
+        left: 14.5rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        top: 15.75rem;
+        left: 7.65rem;
+        height: 16.7rem;
+        width: 16.7rem;
+    }
+}
+.banner__image {
+    position: absolute;
+}
+.banner__image_desktop {
+    top: 9.9rem;
+    left: 14rem;
+    height: 33rem;
+    width: 55.9rem;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        left: 2rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        top: 17rem;
+        left: 10rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        top: 17rem;
+        left: 3rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        top: 17rem;
+        left: 2rem;
+        height: 16.5rem;
+        width: 27.95rem;
+    }
+}
+.banner__image_ipad {
+    top: 6.2rem;
+    left: 27.7rem;
+    height: 40.6rem;
+    width: 29rem;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        left: 15.7rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        top: 14rem;
+        left: 23.7rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        top: 14rem;
+        left: 16.7rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        top: 14rem;
+        left: 8.75rem;
+        height: 20.3rem;
+        width: 14.5rem;
+    }
+}
+.banner__image_iphone {
+    top: 5.9rem;
+    left: 29.6rem;
+    width: 25.6rem;
+    height: 44.6rem;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        left: 17.6rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        top: 13rem;
+        left: 25.6rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        top: 13rem;
+        left: 18.6rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        top: 13rem;
+        left: 9.6rem;
+        width: 12.8rem;
+        height: 22.3rem;
+    }
+}
+.banner__image_lower {
+    top: 29.1rem;
+    left: 17.1rem;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        left: 2rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        top: 17rem;
+        left: 10rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        top: 17rem;
+        left: 3rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        top: 14rem;
+        left: 2rem;
+        height: 16.5rem;
+        width: 27.95rem;
+    }
+}
+.banner__banner-info {
+    float: right;
+    margin-right: 20.1rem;
+    margin-top: 11.2rem;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        margin-top: 14.2rem;
+        margin-right: 5.1rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        float: none;
+        margin-top: 60.2rem;
+        margin-left: 20rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        float: none;
+        margin-top: 60.2rem;
+        margin-left: 15rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        float: none;
+        margin-top: 40.2rem;
+        margin-left: 3rem;
+    }
+}
+.banner__banner-info_lower {
+    margin-top: 29rem;
+    // 750 (768)
+    @media screen and @m {
+        float: none;
+        margin-top: 55.2rem;
+        margin-left: 20rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        float: none;
+        margin-top: 55.2rem;
+        margin-left: 15rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        float: none;
+        margin-top: 35.2rem;
+        margin-left: 3rem;
+    }
+}
+
+// /Инфа о приложении года
+.banner-info {}
+.banner-info__title-app {}
+.banner-info__shoecase {
+    margin-top: 5.9rem;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        margin-top: 4.2rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        margin-top: 4.2rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        margin-top: 4.2rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        margin-top: 4.2rem;
+    }
+}
+
+// /Звание приложения года
+.title-app {
+    width: 15.3rem;
+    min-height: 5.5rem;
+    text-transform: uppercase;
+    font-family: @font-segoe-wp-light;
+    font-size: 2.1rem;
+    font-weight: 300;
+    line-height: 1.19;
+    color: @main-color;
+}
+.title-app__image {
+    float: left;
+    margin-right: 0.9rem;
+    height: 5.5rem;
+    width: 5.5rem;
+    background-image: url("../media/images/Shape planet.png");
+}
+
+// /Демонстрация приложения
+.shoecase {
+    width: 35.5rem;
+    font-family: @font-segoe-wp-light;
+    font-weight: 300;
+    color: @main-color;
+    // 320(320 и 360)
+    @media screen and @xs {
+        width: 26rem;
+    }
+}
+.shoecase__shoecase-name {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 3.9rem;
+}
+.shoecase__shoecase-info {
+    font-size: 1.7rem;
+    line-height: 2.118;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        line-height: 1.9;
+    }
+    // 750 (768)
+    @media screen and @m {
+
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+
+    }
+}
+.shoecase__btn {
+    margin-top: 3rem;
+}
+
+// /Кнопка
+.btn {
+    display: block;
+    height: 4.5rem;
+    width: 17.2rem;
+    line-height: 4.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: @font-segoe-wp-light;
+    font-size: 2.1rem;
+    font-weight: 300;
+    color: @main-color;
+    background: @additional-color + #4D3F32;
+    transition: box-shadow 200ms;
+    &:hover {
+        -webkit-box-shadow: 0 2px 4.9px 0.2px rgba(33, 33, 33, 0.35);
+        box-shadow: 0 2px 4.9px 0.2px rgba(33, 33, 33, 0.35);
+    }
+    &:active {
+        position: relative;
+        top: 2px;
+        -webkit-box-shadow: 0 0 5px rgba(33, 33, 33, 0.35);
+        box-shadow: 0 0 5px rgba(33, 33, 33, 0.35);
+    }
+}
+.btn__image {
+    float: left;
+    height: 4.5rem;
+    width: 5.5rem;
+    background: url("../media/images/Shopping Cart.png") center no-repeat, @accenting-color - #243A22;
+}
+
+// /О ПРИЛОЖЕНИИ ГОДА
+.about {
+    width: 92.2rem;
+    padding-bottom: 12.4rem;
+    text-align: center;
+    // 750 (768)
+    @media screen and @m {
+        width: 70rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        width: 60rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        width: 30rem;
+        padding-bottom: 6.2rem;
+    }
+}
+.about__topic {
+    font-family: @font-segoe-wp-light;
+    font-size: 4.1rem;
+    font-weight: 300;
+    color: @text-color;
+}
+.about__info {
+    font-family: @font-open-sans;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.467;
+    color: @text-color;
+    opacity: 0.8;
+}
+.about__title-app-year {
+    margin-top: 2.9rem;
+    margin-left: 22.5rem;
+    // 750 (768)
+    @media screen and @m {
+        margin-left: 15.5rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        margin-left: 8.5rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        margin-left: 3.5rem;
+    }
+}
+
+// /Конструкция "Приложение года"
+.title-app-year {
+    height: 42.1rem;
+    width: 48.1rem;
+    padding-top: 7rem;
+    padding-right: 5.2rem;
+    box-sizing: border-box;
+    font-family: @font-newathenaunicode;
+    font-size: 8.8rem;
+    line-height: 0.6;
+    font-weight: 400;
+    color: @main-color;
+    background: url("../media/images/backgr-for-app-year.png") center no-repeat;
+    // 320(320 и 360)
+    @media screen and @xs {
+        height: 21.05rem;
+        width: 24.05rem;
+        padding-top: 3.5rem;
+        padding-right: 2.6rem;
+        font-size: 4.4rem;
+        background-size: 24.05rem 21.05rem;
+    }
+}
+.title-app-year__image-device {
+    display: block;
+    margin-left: 18.2rem;
+    margin-bottom: 4rem;
+    height: 10.3rem;
+    width: 7.2rem;
+    @media screen and @xs {
+        margin-left: 9.1rem;
+        margin-bottom: 2rem;
+        height: 5.15rem;
+        width: 3.6rem;
+    }
+}
+.title-app-year__of-the-year {
+    font-size: 4.2rem;
+    @media screen and @xs {
+        font-size: 2.1rem;
+    }
+}
+
+// /% ВЫПОЛНЕНИЯ ПРОЕКТА
+.completed {}
+.completed__completed-percent {
+    float: left;
+    margin-top: 0;
+    margin-left: 19.9rem;
+    width: 40.3rem;
+    text-transform: uppercase;
+    font-family: @font-segoe-wp-light;
+    font-weight: 300;
+    font-size: 7.4rem;
+    line-height: 1.25;
+    color: @accenting-color;
+    // 1000 (1024 и 1080)
+    @media screen and @l {
+        margin-left: 5rem;
+    }
+    // 750 (768)
+    @media screen and @m {
+        margin-left: 4rem;
+        width: 30.3rem;
+        font-size: 5.5rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        margin-bottom: 0;
+        margin-left: 2rem;
+        width: 27rem;
+        font-size: 5rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        float: none;
+        margin: 0 auto;
+        width: 27rem;
+        font-size: 5rem;
+    }
+}
+.completed__percent {
+    font-family: @font-segoe-wp-black;
+    font-size: 20rem;
+    font-weight: 400;
+    // 750 (768)
+    @media screen and @m {
+        font-size: 15rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        font-size: 12rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        font-size: 12rem;
+    }
+}
+.completed__arrow {
+    float: right;
+    height: 51.3rem;
+    width: 49.6rem;
+    background: url("../media/images/arrows.png") center no-repeat,
+                @accenting-color;
+    // 750 (768)
+    @media screen and @m {
+        height: 38.475rem;
+        width: 37.2rem;
+    }
+    // 620 (640 и 667)
+    @media screen and @s {
+        height: 31.23rem;
+        width: 30.15rem;
+    }
+    // 320(320 и 360)
+    @media screen and @xs {
+        float: none;
+        height: 33rem;
+        width: 32rem;
+    }
+}
+
+// /ФУТЕР
+.footer {
+    height: 9.9rem;
+    max-width: 128rem;
+    border-top: 0.1rem solid @text-color;
+    margin: -10rem auto 0; /* верхний для прижания футера к низу экрана (равно футеру)*/
+    text-align: center;
+    line-height: 10rem;
+    font-family: @font-segoe-wp-light;
+    font-weight: 300;
+    font-size: 2.3rem;
+    color: @text-color;
+    opacity: 0.8;
+    @media screen and @l {
+        max-width: 100rem;
+    }
+    @media screen and @m {
+        max-width: 75rem;
+    }
+    @media screen and @s {
+        max-width: 62rem;
+    }
+    @media screen and @xs {
+        max-width: 32rem;
+    }
+}
+
+// / /Дубер футера для прижатия к низу экрана
+.clr:after {content: "";
+    height: 10rem; /*высота, равная футеру*/
+    display: block;}
+
+// /Пустой блок для предотвращения наезда на блоки с float
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}

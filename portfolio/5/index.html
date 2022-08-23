@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Plant shop</title>
+
+  <!-- Фавиконы и иконки сайта -->
+  <link rel="icon" href="media/images/logo.svg" sizes="any" type="image/svg+xml"> <!-- фавикон в формате svg подходит для всех случаев -->
+
+  <!-- СТИЛИ -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- СКРИПТЫ -->
+  <script src='js/jquery-3.6.0.min.js'></script>
+  <script src="js/main.js" defer></script>
+
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <a href="#"><img src="media/images/logo.svg" alt="logo"></a>
+    <div class="menu header__menu">
+      <a href="#"><img class="menu__search" src="media/images/search.png" alt="search" title="Поиск по сайту"></a>
+      <a href="#"><img class="menu__shopping-cart" src="media/images/shopping-cart.png" alt="shopping cart" title="Корзина"></a>
+      <a href="#" class="sign sign_up">Регистрация</a>
+      <a href="#" class="sign sign_in">Вход</a>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="content">
+    <section class="slider clearfix">
+      <div id="sliderWrapper" class="slider-wrapper">
+        <div class="slide active">
+          <img class="main-plant slider__main-plant" src="media/images/melissa.jpg" alt="Мелисса">
+          <div class="sliderinfo slider__sliderinfo">
+            <h1 class="plantname slider__plantname">Мелисса лекарственная</h1>
+            <p class="plantdescription slider__plantdescription">Мелисса лекарственная более 2000 лет успешно используется в народной и научной медицине многих стран мира. В народе имеет название "лимонная мята".</p>
+          </div>
+          <div class="slider-btn slider-prev">
+              <div class="switch">
+                <img src="media/images/arrow.svg" alt="previous">
+                Назад
+              </div>
+              <h2 class="switch-plant" title="Трихоцереус">Трихоцереус</h2>
+            </div>
+          <div class="slider-btn slider-next">
+              <div class="switch switch_on-green">
+                Далее
+                <img src="media/images/arrow-next.svg" alt="next">
+              </div>
+              <h2 class="switch-plant switch-plant_on-green" title="Спатифиллум">Спатифиллум</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img class="main-plant slider__main-plant" src="media/images/spatifillum.jpg" alt="Спатифиллум">
+          <div class="sliderinfo slider__sliderinfo">
+            <h1 class="plantname slider__plantname">Спатифиллум</h1>
+            <p class="plantdescription slider__plantdescription">Спатифиллумы в России в быту иногда называют «женским счастьем». Поверье гласит, что если держать горшки с антуриумом и спатифиллумом рядом, можно достигнуть гармонии в семейных отношениях.</p>
+          </div>
+          <div class="slider-btn slider-prev">
+            <div class="switch">
+              <img src="media/images/arrow.svg" alt="previous">
+              Назад
+            </div>
+            <h2 class="switch-plant" title="Мелисса">Мелисса</h2>
+          </div>
+          <div class="slider-btn slider-next">
+            <div class="switch switch_on-green">
+              Далее
+              <img src="media/images/arrow-next.svg" alt="next">
+            </div>
+            <h2 class="switch-plant switch-plant_on-green" title="Трихоцерерус">Трихоцерерус</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img class="main-plant slider__main-plant" src="media/images/trichocererus.jpg" alt="Трихоцерерус">
+          <div class="sliderinfo slider__sliderinfo">
+            <h1 class="plantname slider__plantname">Трихоцерерус</h1>
+            <p class="plantdescription slider__plantdescription">Трихоцереус обычно распускается только в темное время. В отличие от многих других видов запах цветов скорее приятный, но почувствовать его можно только ночью.</p>
+          </div>
+          <div class="slider-btn slider-prev">
+            <div class="switch">
+              <img src="media/images/arrow.svg" alt="previous">
+              Назад
+            </div>
+            <h2 class="switch-plant" title="Спатифиллум">Спатифиллум</h2>
+          </div>
+          <div class="slider-btn slider-next">
+            <div class="switch switch_on-green">
+              Далее
+              <img src="media/images/arrow-next.svg" alt="next">
+            </div>
+            <h2 class="switch-plant switch-plant_on-green" title="Мелисса">Мелисса</h2>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button id="prevBtn" class="slider-btn-hide" type="button"></button>
+        <button id="nextBtn" class="slider-btn-hide" type="button"></button>
+      </div>
+    </section>
+    <section class="advantages">
+      <article class="advant-block">
+        <img class="advant-icon" src="media/images/fast%201.svg" alt="icon Fast Delivery">
+        <h3 class="advant-name">Быстрая Доставка</h3>
+        <p class="advant-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+      </article>
+      <article class="advant-block">
+        <img class="advant-icon" src="media/images/headphones%201.svg" alt="icon Great Customer Service">
+        <h3 class="advant-name">Отличный Сервис</h3>
+        <p class="advant-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+      </article>
+      <article class="advant-block">
+        <img class="advant-icon" src="media/images/plant%201.svg" alt="icon Original Plants">
+        <h3 class="advant-name">Оригинальные <br>Растения</h3>
+        <p class="advant-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+      </article>
+      <article class="advant-block">
+        <img class="advant-icon" src="media/images/dollar-symbol%201.svg" alt="icon Affordable Price">
+        <h3 class="advant-name">Доступные <br>Цены</h3>
+        <p class="advant-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
+      </article>
+    </section>
+    <section class="featured">
+      <div class="featured-header">
+        <h2 class="featured-name">Популярные растения</h2>
+        <form>
+          <label for="filter">
+            <select class="filter" name="filter" id="filter">
+              <option selected value="nofilter">Сортировать</option>
+              <option value="cheaper">Дешевые сначала</option>
+              <option value="expensive">Дорогие сначала</option>
+            </select>
+          </label>
+        </form>
+      </div>
+      <hr class="line">
+      <div class="plants">
+        <article class="plant">
+          <img class="plant-foto" src="media/images/annie-spratt-fbAnIjhrOL4-unsplash%201.png" alt="Пилозоцереус">
+          <a class="plant-link" href="#">
+            <h3 class="plant-name">Пилозоцереус</h3>
+            <span class="price">800 <span>руб.</span></span>
+          </a>
+        </article>
+        <article class="plant">
+          <img class="plant-foto" src="media/images/stephanie-harvey-T0inbt7nRME-unsplash%201.png" alt="Алоэ">
+          <a href="#" class="plant-link">
+            <h3 class="plant-name">Алоэ</h3>
+            <span class="price">950 <span>руб.</span></span>
+          </a>
+        </article>
+        <article class="plant">
+          <img class="plant-foto" src="media/images/stephanie-harvey-wDhLrN9FAAM-unsplash%201.png" alt="Трихоцереус">
+          <a href="#" class="plant-link">
+            <h3 class="plant-name">Трихоцереус</h3>
+            <span class="price">500 <span>руб.</span></span>
+          </a>
+        </article>
+        <article class="plant">
+          <img class="plant-foto" src="media/images/stephanie-harvey-vHkj3fX9wCk-unsplash%20(1)%201.png" alt="Гастерия">
+          <a href="#" class="plant-link">
+            <h3 class="plant-name">Гастерия</h3>
+            <span class="price">1200 <span>руб.</span></span>
+          </a>
+        </article>
+        <article class="plant">
+          <img class="plant-foto" src="media/images/galina-n-miziNqvJx5M-unsplash%201.png" alt="Хавортия">
+          <a href="#" class="plant-link">
+            <h3 class="plant-name">Хавортия</h3>
+            <span class="price">1250 <span>руб.</span></span>
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class="article-block clearfix">
+      <article class="article">
+        <div class="article-wrapper">
+          <h2 class="article-header">Купите больше растений, они помогают расслабиться</h2>
+          <p class="article-paragraph">Исследования показали, что растения в доме могут снизить уровень стресса почти на 40 %. Причина проста: “зелень” напоминает нам о природе на открытом воздухе и более медлительном темпе жизни. И даже если вы, глядя на горшок с фикусом, не можете представить себя в тропическом лесу, то подсознание все сделает самостоятельно.</p>
+        </div>
+        <img class="illustration" src="media/images/liana-mikah-8tJxjQWTyNA-unsplash%201.jpg" alt="">
+      </article>
+      <img class="illustration-big" src="media/images/jason-leung-r5pPYI6lEpA-unsplash%201.jpg" alt="">
+    </section>
+    <section class="banner">
+      <div class="banner-content banner__banner-content">
+        <h2 class="banner-header">Получите ваше любимое растение в нашем магазине прямо сейчас</h2>
+        <a class="btn" href="#">Посетить магазин</a>
+      </div>
+      <img src="media/images/sanni-sahil-Y71kWrdt14k-unsplash%201.png" alt="plant">
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="address-block">
+      <a class="link-to-main address-block__link-to-main" href="#">plantku</a>
+      <h3 class="footer-headers">Дом Plantku</h3>
+      <p class="address">РФ, 55282, г. Москва, ул. Ленивка, д. 32 стр. 12, тел. +7-123-45-67</p>
+    </div>
+    <div class="company">
+      <h3 class="footer-headers">Компания</h3>
+      <a class="footer-links" href="#">О нас</a>
+      <a class="footer-links" href="#">Свяжитесь с нами</a>
+    </div>
+    <div class="products">
+      <h3 class="footer-headers">Товары</h3>
+      <a class="footer-links" href="#">Растения</a>
+      <a class="footer-links" href="#">Другое</a>
+    </div>
+    <div class="newsletter">
+      <h3 class="footer-headers">Подпишитесь на нашу Email рассылку</h3>
+      <form action="#">
+        <label>
+          <input class="input" type="text" placeholder="Введите Адрес Email">
+        </label>
+        <button class="submit newsletter__submit" type="submit">Отправить</button>
+      </form>
+    </div>
+  </footer>
+</body>
+
+</html>
