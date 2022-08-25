@@ -173,7 +173,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 7vh 4vw 5vh;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   line-height: 11vmin;
   font-size: 9vmin;
