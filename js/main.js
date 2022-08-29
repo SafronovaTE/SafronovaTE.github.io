@@ -33,4 +33,14 @@ $(document).ready(function(){
       calcVH();
     });
   })(jQuery);
+
+// js присвоение класса active для открытия описания работы в портфолио
+  const openBtns = document.querySelectorAll(".open-btn");
+
+  openBtns.forEach(faq => {
+    faq.addEventListener('click', () => {
+      faq.classList.toggle("open-btn_active");
+    })
+  })
+
 });
