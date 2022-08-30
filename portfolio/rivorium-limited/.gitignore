@@ -1,0 +1,10 @@
+# папка .idea
+*.iml
+.idea
+# папка _dev
+_dev
+_dev/*
+# файлы scss и less
+*.scss
+*.less
+out
