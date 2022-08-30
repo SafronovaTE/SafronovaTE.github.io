@@ -140,7 +140,7 @@ img {
   box-sizing: border-box;
   text-align: center;
   color: #ffffff;
-  background: url("../media/first-bg.jpg") center bottom no-repeat; }
+  background: #000000 url("../media/first-bg.jpg") center bottom no-repeat; }
   @media screen and (max-width: 550px) {
     .first-screen {
       padding: 25px; } }
