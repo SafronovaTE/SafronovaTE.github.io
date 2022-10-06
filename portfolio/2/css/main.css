@@ -605,7 +605,7 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
-.single-portfolio .comments time {
+.single-portfolio .comments span {
   margin-left: 16px;
 }
 .single-portfolio .comments p {
